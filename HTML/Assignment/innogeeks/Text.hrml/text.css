@@ -1,0 +1,42 @@
+.Text{
+    font-size: 28px;
+    font-weight:bold;
+    Line-height: 30px;
+    width:400px;
+    margin-bottom:10px;
+}
+.Text1{
+    font-size: 14px;
+    color: gray;
+}
+.Text2{
+    font-size: 20px;
+    color:rgb(102, 97, 97);
+    margin-bottom: 20px;
+}
+.Text3{
+    font-size: 20px;
+    width:350px;
+    line-height: 22px;
+}
+p{
+    font-family: arial;
+    margin-top:0px;
+}
+.Text4{
+    margin-bottom:50px;
+    margin-bottom:50px;
+    font-size:18px;
+    background-color:rgb(229, 70, 70);
+    color:white;
+    text-align: center;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.Text5{
+    margin-left:4px;
+}
+.Text5:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}

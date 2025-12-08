@@ -1,0 +1,248 @@
+/* CSS Variables for Easy Theme Management */
+:root {
+    --primary-color: #eca8e2;
+    --accent-color: #f0937f;
+    --dark-bg: #1a1a2e; /* Dark background color */
+    --light-bg: #fff;
+    --text-color-dark: #fff;
+    --text-color-light: #333;
+    --card-bg-dark: #2a2a3e;
+}
+
+/* Basic Reset and Font Import */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensures smooth scrolling to anchor links */
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--dark-bg);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size:25px;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: var(--dark-bg);
+    padding: 15px 0;
+    position: sticky; /* Makes the navbar stay at the top */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+    display: flex; /* Uses flexbox for alignment */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--text-color-dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: var(--text-color-dark);
+    text-decoration: none;
+    margin-left: 25px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: var(--dark-bg);
+    padding: 150px 0 100px 0;
+    text-align: center;
+    /* Added subtle gradient for depth */
+    background-image: linear-gradient(to bottom, var(--dark-bg), #111122); 
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 50px; /* Pill-shaped button */
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.cta-button:hover {
+    background: #e64d2e;
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
+
+.section-bg-light {
+    background: var(--light-bg);
+    color: var(--text-color-light);
+}
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Skills Section Specifics (Using CSS Grid for layout) */
+.skills-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-card {
+    background: var(--card-bg-dark);
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--text-color-dark);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.section-bg-light .skill-card {
+     background: #f4f4f4;
+     color: var(--text-color-light);
+}
+
+.skill-card:hover {
+    background: var(--primary-color);
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.skill-card i {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Hobbies & Projects Styling */
+#hobbies ul {
+    list-style: none; /* Removed default bullets */
+    margin: 0;
+    padding: 0;
+}
+
+#hobbies li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary-color);
+}
+
+#hobbies li i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.project-card {
+    background: var(--card-bg-dark);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Contact Section Specifics */
+#contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contact p i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #0d0d1a;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* Basic Responsiveness (Media Query for smaller screens) */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none; /* Hides nav links for mobile, requires JS for a menu toggle */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Additions to styles.css */
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 20px;
+    border: 4px solid var(--primary-color); /* Adds a colored border */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
