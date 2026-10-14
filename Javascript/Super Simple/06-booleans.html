@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <script>
+        console.log(typeof true);
+        // == tries to convert both the values into same type wheareas === doesn't
+        console.log(3 > 5);
+        console.log(5 == '5.00');
+        console.log(5 === '5.00');
+
+        if(true){
+            console.log('hello');
+        }
+
+        if(5){
+            console.log('truthy');
+        }
+
+        if(0){
+            console.log('falsy');
+        }
+        /* falsy values: false, 0, '', NaN: Not a number, undefined: this can't be used with const until and unless it equals to undefined directly, null: 
+        any value not in this list is truthy*/
+
+        // Ternary operator: 
+
+        const result=0 ? 'truthy' : 'falsy';
+        console.log(result);
+
+        const r=5 ? 'truthy' : 'falsy';
+        console.log(r);
+    </script>
+</body>
+</html>

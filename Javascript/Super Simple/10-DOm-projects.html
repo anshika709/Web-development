@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        .subscribe-button{
+            border: none;
+            background-color: black;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .is-subscribed{
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+
+        .cost-input{
+            font-size: 15px;
+            /*padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px; */
+            padding: 10px;
+        }
+
+        .calculate-button {
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 11px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Youtube Subscribe Button</p>
+    <button onclick="
+        subscribe();
+    " class = "js-subscribe-button subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+
+    <input placeholder="Cost of Project" class="js-cost-input cost-input" onkeydown="handleCostKeydown(event);
+    ">
+    <!-- clicks, keydowns : events; onclick, onkeydown : event listeners also event.key tells which key we pressed -->
+
+    <button onclick="
+        calculateTotal();
+    " class="calculate-button">Calculate</button> 
+    <p class="js-total-cost"></p>
+
+
+    <script>
+
+        String(24); // this converts 24 into string
+        console.log('24' - 4); // type conversion
+        console.log('24' + 4); // this converts maths to string 
+
+        window.document
+        window.console.log('window');
+        window.alert // window is a builtin object
+
+        function handleCostKeydown(event){
+            if(event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal(){
+            const inputElement = document.querySelector('.js-cost-input');
+            // inputElement.value is used to take input in textbox and input is used to make a textbox
+            let cost=Number(inputElement.value);
+
+            if (cost<40){
+                cost=cost+10;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        }
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+
+        // innerHTML takes all the element inside the button or whatever part we are slecting but in case of innerText it selects only text
+        if(buttonElement.innerText === 'Subscribe'){
+            buttonElement.innerText='Subscribed';
+            buttonElement.classList.add('is-subscribed');
+        }
+        else{
+            buttonElement.innerText='Subscribe';
+            buttonElement.classList.remove('is-subscribed');
+        }
+        }
+    </script>
+</body>
+</html>

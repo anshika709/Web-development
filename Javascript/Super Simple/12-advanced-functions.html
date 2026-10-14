@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functionst</title>
+</head>
+<body>
+    <!-- instead of using onclick for make it work we can use .addEventListener() -->
+    <button class="js_button">Click</button>
+
+
+
+    <script>
+        const buttonElement = document.querySelector('.js_button');
+
+        //let's store the function for passing the function in removeEventListener
+        const  eventListener = () => {
+            console.log('click');
+        }
+
+        //addEventListener has two parameters: 1-event or what type of interection we are listening for(the way to  find the event name is look after the word on like here it is click), 2-a function we want to run when we click the element
+
+        buttonElement.addEventListener('click', /*() => {
+            console.log('click');
+        } replacing the function with variable*/ eventListener );
+        
+        
+        //advantages of addEventListener:  1-> Multiple event listeners for an event
+        
+        buttonElement.addEventListener('click', () => {
+            console.log('click2');
+        });
+        
+        //Advantage2 -> we can remove an event listener using .removeEventListener()
+        //also it has two parameters: 1-> event, 2->the function which we want to remove
+        
+        buttonElement.removeEventListener('click', eventListener); // only click2 will be displayed
+
+        // an other type of addEventListener: .addEventListener() with keydown : to work with keyboard;
+        // syntax: let's suppose we are working onn the body: document.body.addEventListener('keydown', () => {}); first parameter will be keydown and 2nd will be the function
+
+        // in lesson 9 in dom part we learned about onkeydown and event.key which provides the key which was pressed addEventListener also has this property but as parameter in the function, document.body.addEventListener('keydown', (event) => {});
+
+
+        
+        // function greeting(){
+        //     console.log('hello');
+        // }
+        // greeting() 
+        // // Hoisting: using it we don't don't need to be worry about the order of the code, also it doesn't work when we create a function and add it in a variable
+
+        // // this method is known as calling the function or running the function
+        
+        // // functions are also values, we can save a function inside a variable
+        // const num = 2;
+        // const function1 = function /*greeting*/() {
+        //     console.log('hello2');
+        // };
+        // // in js as long as there's a way to access the function we don't need the greeting function name. now the above function is called anonymous function 
+        // console.log(function1);
+        // console.log(typeof function1);
+
+        // const object1 = {
+        //     num: 2,
+        //     fun: function() {
+        //         console.log('hello3');
+        //     } // annonymous function
+        // };
+        // object1.fun(); // method: function saved inside an object
+        
+
+        // function display(param) {
+        //     console.log(param);
+        // }
+        // display(2); // this method is known as passing a value into a function
+
+        // //As functions are values we can also pass functions into a function
+
+        // function run(x) {
+        //     x();
+        // }
+        // run(function() {
+        //     console.log('hello4');
+        // }); // this is known as callback function
+        
+
+        //setTimeout(): allows us to run a function in the future, it takes 2 parameters... 1st one is a function we want to run in the future...2nd parameter is how long to wait before running this function andd this is a no in milliseconds
+
+        // setTimeout( function() {
+        //     console.log('timeout');
+        //     console.log('timeout2');
+        // }, 3000
+        // );
+
+        // //Asynchronous Code: won't wait for a line to finish before going to the next line
+        
+        // console.log('next line');
+        
+        // //Synchronous Code: will wait for one line to finish before going to the next line
+
+        // setInterval(
+        //     function() {
+        //        console.log('interval'); 
+        //     }, 3000
+        // ); // it will keep repeating the function provided in the future
+
+        // console.log('next line 2');
+
+        //forEach(): way for looping an array also the preffered way -- loops through the array and for each of these values(values inside the array) it will save the value inside the parameter and run the function
+
+        // [
+        //     'male dinner',
+        //     'wash dishes',
+        //     'watch youtube'
+        // ].forEach(function(value/*parameter*/){
+        //     console.log(value);
+        // });
+        // // for-each loop is preferred cuz it's easy to read rather than a for loop
+
+        // // for-each loop has one more characteristic: we can give it index too
+        // [
+        //     'male dinner',
+        //     'wash dishes',
+        //     'watch youtube'
+        // ].forEach(function(value/*parameter*/, index){
+        //     console.log(index);
+        //     console.log(value);
+        // });
+
+        // // continue: let's us skip to the next iteration; for each loop doesn't have continue statements but we can do the same using return statement
+        
+        // //let's take an example: we don't want to show wash dishes
+
+        // [
+        //     'male dinner',
+        //     'wash dishes',
+        //     'watch youtube'
+        // ].forEach((value, index) => /*if we are passing a function it is suggested to use arrow function*/ {
+        //     if(value === 'wash dishes'){
+        //         return;
+        //     }
+        //     console.log(index);
+        //     console.log(value);
+        // });
+
+        // //break: let's us exit a loop early; it's not easy to break a forEach loop so if we need to break then it's better to use for loop
+
+
+        // //arrowFunction: mostly works the same way as the regular function
+
+        // const regularFunction = function(param, param2){
+        //     console.log('hello');
+        //     return 5;
+        // };
+        // regularFunction();
+
+        // const arrowFunction = (param, param2) => {
+        //     console.log('hello');
+        //     return 5;
+        // };
+        // arrowFunction();
+
+        // const oneParam = (param) /*if there's just one parameter we can actually remove these breackets it'll work the same ex=> we can just write param*/ => {
+        //     console.log(param+1);
+        // };
+        // oneParam(2);
+
+        // // if there's just one line in arrowFunction we can write it in the same line as of arrow and thus those curly brackets can also be removed along with return statement otherwise it'll throw error
+
+        // // const oneLine = () => {
+        // //     return 2+3;
+        // // };
+
+        // const oneLine = () => 2+3;
+        // console.log(oneLine());
+
+        // const object2 = {
+        //     // method: () => {
+
+        //     // }, eventhough we can use arrow functions for creating methods inside object but there's already a builtin method to make methods which is written below
+        //     method() {
+
+        //     }
+        // };
+
+
+
+
+        // TWO MORE ARRAY METHODS
+
+        // 1: .filter() it works the same way as forEach and it has 2 parameters value and index
+        // it creates a new array and if the inner function return true value then it puts that value into array and if it returns it doesn't
+
+        console.log([1, -3, 5].filter((value, index) => {
+            if(value>=0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }));
+
+        //2: .map(): it works same as the .filter() the difference is just that it puts whatever value which is returned by the inner function
+
+        console.log([1, 1, 3].map((value, index) => {
+            return value * 2;
+        }));
+
+        // shortcut for arrow function
+
+        //notice that we are not using this arrow function so we can remove it also ther's just one parameter so we can remove the round brackets also ther's just one line of code so we can remove the curly brackets and return 
+
+        console.log([1, 1, 3].map(value => value * 2));
+
+        //Closure: if a function has access to a value, it will always have access to that value
+
+        
+    </script>
+</body>
+</html>

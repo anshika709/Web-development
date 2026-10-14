@@ -1,0 +1,78 @@
+/* Overall Page Dark Theme Layout */
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Calculator Grid Envelope Structure Container */
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Calculation Text Panel */
+.calculation-display {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0 0 15px 0;
+    min-height: 50px; /* Maintains window height space even if empty */
+}
+
+/* Row Alignment Layout Framework */
+.button-row {
+    display: flex;
+    gap: 12px;
+}
+
+/* Base Style Blueprint for Number and Operator Buttons */
+.gray-button, .orange-button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px; /* Makes circular shapes */
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.1s;
+}
+
+/* Mockup Gray Color Assignment */
+.gray-button {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+/* Mockup Orange Color Assignment */
+.orange-button {
+    background-color: rgb(254, 159, 10);
+    color: white;
+}
+
+/* Clear Action Button Custom Shape Alignment */
+.clear-button {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px; /* Capsule shape */
+    cursor: pointer;
+    margin-top: 5px;
+    transition: opacity 0.1s;
+}
+
+/* Simple visual click/hover feedback effect */
+.gray-button:hover, .orange-button:hover, .clear-button:hover {
+    opacity: 0.8;
+}

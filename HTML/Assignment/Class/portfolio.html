@@ -3,108 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anshika Rai | Student Portfolio</title>
+    <title>Anshika Rai - My Portfolio</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="portfolio.css">
-    <!-- Import Poppins font from Google Fonts -->
-    <link href="fonts.googleapis.com" rel="stylesheet">
-    <!-- Import Font Awesome Icons -->
-    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <style>
+        /* This extra style block is added just for the image */
+        .profile-img {
+            display: block; /* Centers the image */
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px; /* Sets a fixed size */
+            height: auto;
+            border-radius: 50%; /* Makes the image round (optional beginner style) */
+            border: 3px solid #50b3a2;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Anshika Rai</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero/Header Section -->
-    <header class="hero" id="home">
-        <div class="container hero-content">
-            <!-- Profile Image Added Here -->
-            <img src="profile_pic.jpg" alt="Anshika Rai Profile Picture" class="profile-img">
-            <h1>Hello, I'm Anshika Rai</h1>
-            <p>B.Tech First Year | AIML Student at KIET Ghaziabad</p>
-            <p>Aspiring Artificial Intelligence & Machine Learning Enthusiast</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
+    <header>
+        <h1>Anshika Rai</h1>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="section-bg-light">
-        <div class="container">
+    <div class="container">
+        <div class="section">
+            <!-- The new image tag is added here, referencing the file you saved -->
+            <img src="profile_pic.jpg" alt="Anshika Rai Profile Picture" class="profile-img">
+            
             <h2>About Me</h2>
             <p>
-                A passionate first-year B.Tech student in the Artificial Intelligence & Machine Learning branch at the prestigious KIET Group of Institutions, Ghaziabad. I have a keen interest in exploring the world of AI and am currently building a strong foundation in core programming concepts and web technologies.
+                Hello! I am Anshika Rai, a B.Tech student in Artificial Intelligence and Machine Learning (AIML) at the <strong>KIET Group of Institutions</strong>. I am a beginner in web development and this is my very first portfolio website made with basic HTML and CSS. I am passionate about learning new technologies and improving my coding skills.
             </p>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fas fa-cuttlefish"></i> C Language</div>
-                <div class="skill-card"><i class="fab fa-html5"></i> HTML5</div>
-                <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS3</div>
-                <div class="skill-card"><i class="fas fa-brain"></i> AI Basics</div>
-                <div class="skill-card"><i class="fas fa-puzzle-piece"></i> Problem Solving</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hobbies Section -->
-    <section id="hobbies" class="section-bg-light">
-        <div class="container">
-            <h2>Hobbies & Interests</h2>
-            <ul>
-                <li><i class="fas fa-music"></i> Dancing: A creative outlet that helps me relax and stay active.</li>
-                <li><i class="fas fa-book-open"></i> Reading: I enjoy reading tech blogs and fictional novels to broaden my perspectives.</li>
-                <li><i class="fas fa-laptop-code"></i> Exploring AI: Continuously learning about new developments in Artificial Intelligence.</li>
+        <div class="section">
+            <h2>Skills</h2>
+            <p>Here are some of the programming languages and technologies I have learned so far:</p>
+            <ul class="skills-list">
+                <li>C Programming Language</li>
+                <li>HTML (Basic structure)</li>
+                <li>CSS (Basic styling)</li>
             </ul>
         </div>
-    </section>
-    
-    <!-- Projects Section (Placeholder for future projects) -->
-    <section id="projects">
-        <div class="container">
+
+        <div class="section">
             <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Foundational C Programming</h3>
-                <p>Simple command-line applications developed in C to understand fundamental programming logic.</p>
-                <a href="#">View on GitHub <i class="fab fa-github"></i></a>
+            <div class="project-item">
+                <h3>Project 1: Student Registration Form (HTML/CSS)</h3>
+                <p>
+                    A simple static form created using input tags and basic styling to understand form handling in HTML.
+                </p>
             </div>
-            <div class="project-card">
-                <h3>Basic Web Layouts</h3>
-                <p>Static websites built using HTML and CSS for layout practice and design principles.</p>
-                <a href="#">View Project <i class="fas fa-external-link-alt"></i></a>
+            <div class="project-item">
+                <h3>Project 2: Basic Calculator (C)</h3>
+                <p>
+                    A command-line calculator built using C language, demonstrating my understanding of functions and basic arithmetic operations.
+                </p>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-bg-light">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>I'm open to collaborations and learning opportunities. Feel free to connect!</p>
-            <p><i class="fas fa-envelope"></i> Email: <a href="your.email@example.com">raianshika178@gmail.com</a></p>
-            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#">[Your LinkedIn Profile Link]</a></p>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>You can reach me via email at: raianshika178@gmail.com</p>
+            <p>Connect with me on social media (links are placeholders for now!):</p>
+            <ul>
+                <li><a href="#">GitHub: anshika709</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Anshika Rai. Built with HTML & CSS.</p>
-        </div>
+        <p>&copy; 2025 Anshika Rai. Made with simple HTML and CSS.</p>
     </footer>
 
 </body>

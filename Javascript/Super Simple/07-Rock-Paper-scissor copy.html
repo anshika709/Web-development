@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor_Game</title>
+</head>
+<body>
+    <p>
+        Rock Paper Scissors
+    </p>
+    
+    <button onclick="
+        //Math.random() generates a random no in between 0 to 1
+      playGame('Rock');
+    ">Rock</button>
+
+
+    <button onclick="
+        playGame('Paper');
+    "
+    >Paper</button>
+
+
+    <button onclick="
+        //Math.random() generates a random no in between 0 to 1
+        playGame('Scissors');
+        "
+    >Scissors</button>
+
+
+
+    <script>
+        function playGame(player_move){
+            const computer_move=pickcomputermove();
+
+
+            let result= '';
+            
+                if(player_move==='Scissors'){
+                    if(computer_move=== 'Rock'){
+                    result= 'you loose';
+                }
+                else if(computer_move=== 'Paper'){
+                    result='you won';
+                }
+                else{
+                    result= 'tie';
+                }
+                }
+            
+                if(player_move==='Paper'){
+                    if(computer_move=== 'Rock'){
+                    result= 'you won';
+                }
+                else if(computer_move=== 'Paper'){
+                    result='tie';
+                }
+                else{
+                    result= 'you loose';
+                }
+                }
+
+                if(player_move==='Rock'){
+                    if(computer_move=== 'Rock'){
+                    result= 'tie';
+                }
+                else if(computer_move=== 'Paper'){
+                    result='you loose';
+                }
+                else{
+                    result= 'you won';
+                }
+                }
+
+
+            alert(`you picked ${player_move}. Computer picked ${computer_move}. ${result}`);
+        }
+
+        function pickcomputermove(){
+            const random_no=Math.random();
+            let computer_move='';
+            if(random_no>=0 && random_no<1/3){
+                computer_move='Rock';
+            }
+            else if(random_no>=1/3 && random_no<2/3){
+                computer_move='Paper';
+            }
+            else{
+                computer_move='Scissors';
+            }
+
+            return computer_move;
+        }
+    </script>
+</body>
+</html>

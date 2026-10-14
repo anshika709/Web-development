@@ -1,0 +1,64 @@
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.thumb{
+    width: 350px;
+    height: 220px;
+    display: block;
+
+}
+
+.searchbar{
+    font-size: 18px;
+    display: block;
+}
+
+.title{
+    width: 300px;
+    margin-bottom:12px;
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    font-family: roboto,arial,sans-serif;
+    color: #0f0f0f;
+}
+
+.author{
+    display: block;
+    margin-bottom:4px; 
+    font-family: roboto,arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400px;
+    color: #606060;
+}
+
+.stats{
+    display: inline-block;
+    margin-bottom:3px;
+    font-family: roboto,arial,sans-serif;
+    color: #606060;
+    font-weight: 400px;
+    font-size: 14px;
+}
+
+.channel_profile_picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.thumbnail-row{
+    margin-bottom: 12px;
+}
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.preview{
+    width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 25px;
+}
